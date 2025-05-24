@@ -19,7 +19,7 @@ const Contact = () => {
         {/* QR Code + Name */}
         <div className="flex flex-col md:flex-row items-center justify-center mb-12 gap-6">
           <img
-            src="src/assets/images/Siddharth-Maurya.png"
+            src="/assets/images/Siddharth-Maurya.png"
             alt="QR Code"
             className="w-40 h-40 rounded-lg shadow-lg hover:scale-105 transition duration-300"
           />
