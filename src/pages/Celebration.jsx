@@ -5,19 +5,19 @@ const Celebration = () => {
   const photos = [
     {
       title: "Birthday Bash 🎂",
-      img: "src/assets/images/birthday.png",
+      img: "/assets/images/birthday.png",
       description: "Unforgettable birthday celebration with cake, laughter, pizza, and close friends.",
       link: "/celebration/birthday"
     },
     {
       title: "Trekking Adventure 🥾",
-      img: "src/assets/images/bird.png",
+      img: "/assets/images/bird.png",
       description: "Exploring new heights with the squad — nature, boating, and happiness.",
       link: "/celebration/trekking"
     },
     {
       title: "Temple Visit 🛕",
-      img: "src/assets/images/temple.png",
+      img: "/assets/images/temple.png",
       description: "A peaceful day spent together seeking blessings and calmness.",
       link: "/celebration/temple"
     }

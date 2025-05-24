@@ -50,7 +50,7 @@ const FriendDetail = () => {
         {/* Profile Card */}
         <div className="bg-white/60 backdrop-blur-md rounded-3xl shadow-xl p-8 flex flex-col items-center text-center transition-all">
           <img
-            src={`/${friend.img}`}
+            src={`${friend.img}`}
             alt={friend.title}
             className="w-44 h-60 object-cover rounded-xl border shadow-md hover:scale-105 duration-300"
           />

@@ -30,7 +30,7 @@ function LandingPage() {
           {/* Image */}
           <div className="flex-1 mt-12 md:mt-0 flex justify-center">
             <img
-              src="src\assets\images\Home.jpg"
+              src="\assets\images\Home.jpg"
               className="rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300"
             />
           </div>
@@ -63,7 +63,7 @@ function LandingPage() {
             <Link to="/memories/indradhanu" className="block">
               <div className="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition-shadow duration-300">
                 <img
-                  src="src/assets/images/indradhanu.jpg"
+                  src="/assets/images/indradhanu.jpg"
                   alt="Indradhanu"
                   className="w-full h-40 object-cover mb-4 rounded-lg"
                 />
@@ -79,7 +79,7 @@ function LandingPage() {
             <Link to="/memories/traditional" className="block">
               <div className="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition-shadow duration-300">
                 <img
-                  src="src/assets/images/tradi.jpg"
+                  src="/assets/images/tradi.jpg"
                   alt="Traditional Day"
                   className="w-full h-40 object-cover mb-4 rounded-lg"
                 />
@@ -94,7 +94,7 @@ function LandingPage() {
             <Link to="/memories/oracle" className="block">
               <div className="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition-shadow duration-300">
                 <img
-                  src="src/assets/images/oracle.jpg"
+                  src="/assets/images/oracle.jpg"
                   alt="Oracle Yatra"
                   className="w-full h-40 object-cover mb-4 rounded-lg"
                 />

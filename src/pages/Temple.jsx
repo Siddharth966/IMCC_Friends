@@ -1,10 +1,10 @@
 import React from "react";
 import TempleGallery from "./TempleGallery";
 
-import temple from "../assets/images/temple.png";
-import mdir1 from "../assets/images/mdir1.jpg";
-import mdir2 from "../assets/images/mdir2.jpg";
-import mdir3 from "../assets/images/mdir3.jpg";
+import temple from "/assets/images/temple.png";
+import mdir1 from "/assets/images/mdir1.jpg";
+import mdir2 from "/assets/images/mdir2.jpg";
+import mdir3 from "/assets/images/mdir3.jpg";
 
 const images = [
   { src: temple, caption: "Ganpati Bappa morya– peace begins here" },

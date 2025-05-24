@@ -3,7 +3,7 @@
 export const friends = [
   {
     title: "Mohit Fulkar",
-    img: "src/assets/images/mohit.jpg",
+    img: "/assets/images/mohit.jpg",
     slug: "mohit",
     description:
       "Loves chai, reels, coding, and spreading positive vibes everywhere.",
@@ -16,7 +16,7 @@ export const friends = [
   },
   {
     title: "Diksha Chaurasia",
-    img: "src/assets/images/diksha1.jpg",
+    img: "/assets/images/diksha1.jpg",
     slug: "diksha",
     description: "Always cheerful and leading from the front.",
     about: `Diksha has an eye for beauty in the little things — whether it’s framing the perfect photo or lighting up a room with her laughter. A friend who not only captures memories but creates them too, she's always ready with a smile and kind words. She’s the kind of person who helps without being asked, talks to everyone in the group, and makes sure no one ever feels left out. A true ray of sunshine and a heart that leads with kindness. 
@@ -24,7 +24,7 @@ export const friends = [
   },
   {
     title: "Shreyansh Barve",
-    img: "src/assets/images/shreyansh.jpg",
+    img: "/assets/images/shreyansh.jpg",
     slug: "shreyansh",
     description: "Smashes it on the volleyball court and in life too — a real all-rounder with game, grit, and charm!",
     about: `He’s the guy who’ll cancel plans but never miss a chance to help. Reliable in silence and chaotic in humor, he brings balance to every circle he's in.
@@ -37,7 +37,7 @@ A friend, a fixer, a flirt with fate — he plays life like a sport, and somehow
   },
   {
     title: "Satyam Jha",
-    img: "src/assets/images/satyam.jpg",
+    img: "/assets/images/satyam.jpg",
     slug: "satyam",
     description: "Silent assassin — calm outside, witty inside.",
     about: `Satyam may not speak much, but when he does, it’s always worth listening to.
@@ -49,7 +49,7 @@ The plan maker behind the scenes, thinking one steps ahead while others are just
   },
   {
     title: "Vaibhavi Hire",
-    img: "src/assets/images/moment5.jpg",
+    img: "/assets/images/moment5.jpg",
     slug: "vaibhavi",
     description: "Always smiling, mastermind, intelligent, and sweet talker.",
     about: `Vaibhavi brings sunshine wherever she goes.
@@ -60,7 +60,7 @@ She often ties her words to spiritual wisdom, like a true goddess spreading calm
   },
   {
     title: "Siddharth Maurya",
-    img: "src/assets/images/sid.jpg",
+    img: "/assets/images/sid.jpg",
     slug: "siddharth",
     description: "Fun generator, pure heart, and everyone’s favorite vibe booster.",
     about: `Always ready to jump in, fix the issue, and leave you smiling.
@@ -74,7 +74,7 @@ He’s the guy who turns errors into laughter and silence into stories.
   },
   {
     title: "Neha Kadam",
-    img: "src/assets/images/neha.jpg",
+    img: "/assets/images/neha.jpg",
     slug: "neha",
     description: "Strong in words, gentle in heart — graceful like a queen, passionate web series and strong like a warrior. 👑",
     about: `She’s gentle, kind, and fiercely loyal to her people.
@@ -91,7 +91,7 @@ Once you earn her trust, she’ll protect you like her own.
   },
   {
     title: "Harshada Patil",
-    img: "src/assets/images/harshada.jpg",
+    img: "/assets/images/harshada.jpg",
     slug: "harshada",
     description: "Brings calmness wherever she goes — with a very friendly nature and a knack for managing any situation.",
     about: `Harshada is serenity in human form and truly very pretty.
@@ -102,7 +102,7 @@ She knows how to handle any situation with grace, always happy, and effortlessly
   },
   {
     title: "Sakshi Pawar",
-    img: "src/assets/images/sakshi.jpg",
+    img: "/assets/images/sakshi.JPG",
     slug: "sakshi",
     description: "Queen of dance moves and creative Instagram stories — always ready to strike a pose.",
     about: `Sakshi lights up the floor with her dance moves and fills feeds with her aesthetic content.
@@ -114,7 +114,7 @@ Sometimes mysterious, always captivating.
   },
   {
     title: "Prachi Kulkarni",
-    img: "src/assets/images/prachi.jpg",
+    img: "/assets/images/prachi.jpg",
     slug: "prachi",
     description: "Kind soul with a great sense of humor and good character.",
     about: `Always prepared and a master planner, quietly observing more than speaking.
@@ -125,7 +125,7 @@ Sometimes the group photos get Messed up because of his funny timings.
   },
   {
     title: "Supriya Kotha",
-    img: "src/assets/images/moment11.jpg",
+    img: "/assets/images/moment11.jpg",
     slug: "supriya",
     description: "Funny, energetic, and can talk to anyone about anything — always a fun generator.",
     about: `Supriya's energy is contagious.
