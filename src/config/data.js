@@ -4,7 +4,7 @@ import image2 from "../assets/images/ind2.jpg";
 import image3 from "../assets/images/ind3.jpg";
 import image4 from "../assets/images/ind4.jpg";
 import image5 from "../assets/images/ind5.jpg";
-import image06 from "../assets/images/ind6.jpg";
+import image06 from "../assets/images/ind6.JPG";
 
 
 import image6 from "../assets/images/tra1.jpg";
