@@ -49,7 +49,7 @@ The plan maker behind the scenes, thinking one steps ahead while others are just
   },
   {
     title: "Vaibhavi Hire",
-    img: "/assets/images/moment5.jpg",
+    img: "/assets/images/vaibhavi.jpg",
     slug: "vaibhavi",
     description: "Always smiling, mastermind, intelligent, and sweet talker.",
     about: `Vaibhavi brings sunshine wherever she goes.
