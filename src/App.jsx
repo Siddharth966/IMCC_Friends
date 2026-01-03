@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import LandingPage from './components/LandingPage';
@@ -13,6 +13,7 @@ import Birthday from './pages/Birthday';
 import Trekking from './pages/Tracking';
 import Temple from './pages/Temple';
 import Special from './pages/Special';
+import GallerySection from './pages/GallerySection';
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/special" element={<Special />} />
           <Route path="/celebration" element={<Celebration />} />
+          <Route path="/gallery" element={<GallerySection />} />
           <Route path="/friends" element={<Friends />} />
           <Route path="/friends/:slug" element={<FriendDetail />} />
           <Route path="/memories/:eventId" element={<IndradhanuGallery />} />
