@@ -50,7 +50,7 @@ const Footer = () => {
                 © {new Date().getFullYear()} IMCC Friends. All rights reserved.
               </p>
               <p className="text-gray-400">
-                Developed and Design by Siddharh Maurya ❤️
+                Developed and Design by Siddharth Maurya ❤️
               </p>
             </div>
           </div>
