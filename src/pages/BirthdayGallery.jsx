@@ -84,12 +84,12 @@ const BirthdayGallery = ({ title, description, images }) => {
             >
               ⟨ Prev
             </button>
-            <button
+            {/* <button
               onClick={() => setIsPlaying((prev) => !prev)}
               className="px-4 py-2 bg-yellow-400 text-white font-bold rounded shadow hover:bg-yellow-500"
             >
               {isPlaying ? 'Pause ⏸️' : 'Play ▶️'}
-            </button>
+            </button> */}
             <button
               onClick={() => setSelectedIndex(null)}
               className="px-6 py-2 bg-pink-600 text-white font-semibold rounded-lg shadow hover:bg-pink-700 transition"
