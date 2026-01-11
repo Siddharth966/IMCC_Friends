@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
-
+import { useNavigate } from "react-router-dom";
 // Images
 import g1 from "/assets/gallery/1.jpg";
 import g2 from "/assets/gallery/2.jpg";
@@ -90,6 +90,8 @@ import g84 from "/assets/gallery/84.jpg";
 import g85 from "/assets/gallery/85.jpg";
 import g86 from "/assets/gallery/86.jpg";
 import g87 from "/assets/gallery/87.jpg";
+import g88 from "/assets/gallery/88.png";
+
 
 
 
@@ -191,8 +193,12 @@ const GallerySection = () => {
   { id: 85, src: g85, caption: "Memory 85" },
   { id: 86, src: g86, caption: "Memory 86" },
   { id: 87, src: g87, caption: "Memory 87" },
+  { id: 88, src: g88, caption: "Memory 88" },
 ];
 
+
+
+const navigate = useNavigate();
 
   /* ---------- Mobile Detection ---------- */
   useEffect(() => {
@@ -253,14 +259,28 @@ const GallerySection = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
       {/* Header */}
-      <div className="pt-20 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-          Memory Gallery
-        </h1>
-        <p className="text-gray-600 mt-3">
-          Simple memories, lasting impressions
-        </p>
-      </div>
+      {/* Back Button + Title */}
+<div className="pt-10 px-4 max-w-7xl mx-auto flex items-center gap-4">
+
+  {/* Back Button */}
+  <button
+    onClick={() => navigate(-1)}
+    className="flex items-center gap-2 bg-white shadow-md px-4 py-2 rounded-full 
+               text-gray-700 font-medium hover:bg-gray-100 transition"
+  >
+    ← Back
+  </button>
+
+  {/* Title */}
+  <div className="flex-1 text-center mr-12">
+    <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+      Memory Gallery
+    </h1>
+    
+  </div>
+
+</div>
+
 
       {/* Gallery */}
       <div className="max-w-7xl mx-auto px-4 py-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -295,6 +315,14 @@ const GallerySection = () => {
           onTouchStart={onTouchStart}
           onTouchEnd={onTouchEnd}
         >
+           {/* CLOSE BUTTON */}
+    <button
+      onClick={() => setSelectedImage(null)}
+      className="absolute top-6 right-6 px-6 py-2 bg-pink-600 text-white font-semibold 
+                 rounded-lg shadow hover:bg-pink-700 transition"
+    >
+      ✖
+    </button>
           <div
             className="max-w-5xl w-full"
             onClick={(e) => e.stopPropagation()}

@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Home, Users, Calendar, Phone, Star, LogIn, UserPlus, GraduationCap, Camera } from 'lucide-react';
+import { Menu, X, Home, Users, Calendar, Phone, Star, UserPlus, Camera } from 'lucide-react';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Add scroll effect for navbar
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -26,29 +23,48 @@ function Navbar() {
   ];
 
   return (
-    <nav className={`sticky top-0 z-50 transition-all duration-300 ${
-      scrolled 
-        ? 'bg-white/95 backdrop-blur-md shadow-lg py-3' 
-        : 'bg-gradient-to-r from-green-50 to-orange-50 py-4'
-    }`}>
+    <nav
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? 'bg-white/95 backdrop-blur-md shadow-lg py-3'
+          : 'bg-gradient-to-r from-green-50 to-orange-50 py-4'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* TOP ROW */}
         <div className="flex items-center justify-between">
-          
-          {/* Logo with enhanced design */}
+
+          {/* LEFT SECTION */}
           <div className="flex items-center space-x-3">
             <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-orange-500 to-green-500 shadow-lg">
               <span className="text-2xl font-bold text-white">IF</span>
             </div>
+
+            {/* Desktop Title */}
             <div className="hidden sm:block">
               <div className="text-2xl font-bold">
                 <span className="text-orange-600">IMCC</span>
                 <span className="text-green-600 ml-1">Friends</span>
               </div>
-              <p className="text-xs text-gray-500 -mt-1">Classmates • Memories • Forever</p>
+              <p className="text-xs text-gray-500 -mt-1">
+                Classmates • Memories • Forever
+              </p>
+            </div>
+
+            {/* Mobile Title */}
+            <div className="block sm:hidden leading-tight">
+              <div className="text-lg font-bold">
+                <span className="text-orange-600">IMCC</span>
+                <span className="text-green-600 ml-1">Friends</span>
+              </div>
+              <p className="text-[10px] text-gray-500 -mt-0.5">
+                Classmates • Memories
+              </p>
             </div>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* RIGHT Desktop Nav */}
           <div className="hidden lg:flex items-center space-x-1">
             {navItems.map((item) => (
               <a
@@ -62,7 +78,7 @@ function Navbar() {
             ))}
           </div>
 
-          {/* Desktop Auth Buttons */}
+          {/* Desktop Button */}
           <div className="hidden lg:flex items-center space-x-3">
             <button className="flex items-center px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-orange-500 to-green-500 rounded-lg hover:shadow-lg transition-all duration-200">
               <UserPlus className="w-4 h-4 mr-2" />
@@ -70,11 +86,12 @@ function Navbar() {
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* MOBILE BUTTONS */}
           <div className="lg:hidden flex items-center space-x-4">
             <button className="p-2 rounded-lg bg-gradient-to-r from-orange-500 to-green-500 text-white">
               <Star className="w-5 h-5" />
             </button>
+
             <button
               onClick={toggleMenu}
               className="p-2 rounded-lg bg-white shadow-md text-gray-700 hover:text-orange-600"
@@ -84,7 +101,7 @@ function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* MOBILE MENU */}
         {isOpen && (
           <div className="lg:hidden mt-4 bg-white rounded-xl shadow-2xl p-4 border border-gray-100 animate-slideDown">
             <div className="mb-4 pb-4 border-b border-gray-100">
@@ -102,14 +119,12 @@ function Navbar() {
                 ))}
               </div>
             </div>
-            
-            <div className="space-y-3">
-              <button className="w-full flex items-center justify-center p-3 text-sm font-medium text-white bg-gradient-to-r from-orange-500 to-green-500 rounded-lg hover:shadow-lg">
-                <UserPlus className="w-4 h-4 mr-2" />
-                Namaskar Dosto !!
-              </button>
-            </div>
-            
+
+            <button className="w-full flex items-center justify-center p-3 text-sm font-medium text-white bg-gradient-to-r from-orange-500 to-green-500 rounded-lg hover:shadow-lg">
+              <UserPlus className="w-4 h-4 mr-2" />
+              Namaskar Dosto !!
+            </button>
+
             <div className="mt-4 pt-4 border-t border-gray-100 text-center">
               <p className="text-xs text-gray-500">Designed By Siddharth Maurya</p>
             </div>
@@ -117,8 +132,8 @@ function Navbar() {
         )}
       </div>
 
-      {/* Add custom CSS for animation */}
-      <style jsx>{`
+      {/* Correct style tag */}
+      <style>{`
         @keyframes slideDown {
           from {
             opacity: 0;
