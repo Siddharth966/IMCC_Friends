@@ -26,13 +26,13 @@ export const friends = [
     rating: 4.9,
     isOnline: true,
     isSpecial: true,
-    favorites: ["Chai", "Coding", "Memes", "Music", "Late Night Talks"],
+    favorites: ["Chai", "Coding", "Memes", "Music", "Late Night Talks","Badminton"],
     
     gallery: [
       "/assets/images/mohit.jpg",
-      "/assets/images/mohit1.jpg",
-      "/assets/images/mohit2.jpg",
-      "/assets/images/mohit3.jpg"
+      "/assets/images/mohit1.png",
+      "/assets/images/mohit2.png",
+      "/assets/images/mohit3.png"
     ]
   },
   {
@@ -46,13 +46,13 @@ export const friends = [
     
     fullName: "Diksha Chaurasia",
     nickname: "Diksha",
-    role: "Photographer & Mood Lifter",
+    role: "Group Leader, Good Planner",
     joinDate: "September 2023",
     birthday: "10 September",
     hometown: "Kanpur",
     
-    categories: ["Photography", "Cheerful", "Leader"],
-    tags: ["Photographer", "Smile Giver", "Helper", "Creative", "Artistic"],
+    categories: ["Leader", "Cheerful", "Music"],
+    tags: ["Leader", "Smile Giver", "Helper", "Creative", "Artistic"],
     
     email: "diksha.chaurasia@example.com",
     instagram: "@dikshachaurasia",
@@ -62,12 +62,13 @@ export const friends = [
     rating: 4.9,
     isOnline: true,
     isSpecial: true,
-    favorites: ["Photography", "Music", "Dance", "Art", "Travel"],
+    favorites: ["Badminton", "Music", "Dance", "Art", "Travel"],
     
     gallery: [
       "/assets/images/diksha1.jpg",
-      "/assets/images/diksha2.jpg",
-      "/assets/images/diksha3.jpg"
+      "/assets/images/diksha1.png",
+      "/assets/images/diksha2.png",
+      "/assets/images/diksha3.png"
     ]
   },
   {
@@ -80,14 +81,14 @@ export const friends = [
     shortAbout: "वॉलीबॉल का खिलाड़ी, ज़िंदगी का भी उस्ताद, हर मोड़ पे देता है अपनी मुस्कान का साथ।",
     
     fullName: "Shreyansh Barve",
-    nickname: "Shreyu",
-    role: "Volleyball Player & All-rounder",
+    nickname: "Barve",
+    role: "Volleyball Player & Badminton",
     joinDate: "September 2023",
-    birthday: "1 Aprail",
+    birthday: "1 April",
     hometown: "Mandleshwar",
     
     categories: ["Sports", "Charming", "Reliable"],
-    tags: ["Volleyball", "Sportsman", "Helper", "Funny", "Charming"],
+    tags: ["Volleyball", "Sportsman", "Helper", "Funny", "Charming","Badminton"],
     
     email: "shreyansh.barve@example.com",
     instagram: "@shreyanshbarve",
@@ -101,9 +102,9 @@ export const friends = [
     
     gallery: [
       "/assets/images/shreyansh.jpg",
-      "/assets/images/shreyansh1.jpg",
-      "/assets/images/shreyansh2.jpg",
-      "/assets/images/shreyansh3.jpg"
+      "/assets/images/shreyansh2.png",
+      "/assets/images/shreyansh3.png",
+      "/assets/images/shreyansh4.png"
     ]
   },
   {
@@ -117,13 +118,13 @@ export const friends = [
     
     fullName: "Satyam Jha",
     nickname: "Satyam",
-    role: "Silent Strategist",
+    role: "Silent Strategist & Allrounder Player",
     joinDate: "September 2023",
     birthday: "15 July",
     hometown: "Indore",
     
-    categories: ["Observant", "Witty", "Strategic"],
-    tags: ["Observer", "Thinker", "Planner", "Silent Genius"],
+    categories: ["Observant", "Player","Witty", "Strategic"],
+    tags: ["Observer", "Thinker", "Planner", "Silent Genius","Badminton"],
     
     email: "satyam.jha@example.com",
     instagram: "@satyamjha",
@@ -133,12 +134,13 @@ export const friends = [
     rating: 4.9,
     isOnline: true,
     isSpecial: false,
-    favorites: ["Reading", "Strategy Games", "Deep Conversations", "Movies"],
+    favorites: ["Coding", "Strategy Games", "Deep Conversations", "Planner"],
     
     gallery: [
       "/assets/images/satyam.jpg",
-      "/assets/images/satyam1.jpg",
-      "/assets/images/satyam2.jpg"
+      "/assets/images/satyam2.png",
+      "/assets/images/satyam3.png",
+      "/assets/images/satyam4.png"
     ]
   },
   {
@@ -152,7 +154,7 @@ export const friends = [
     
     fullName: "Vaibhavi Hire",
     nickname: "Vaibhavi",
-    role: "Sunshine & Planner",
+    role: "Sunshine & Genius",
     joinDate: "September 2023",
     birthday: "9 November",
     hometown: "Pune",
@@ -187,13 +189,13 @@ export const friends = [
     
     fullName: "Siddharth Maurya",
     nickname: "Sid",
-    role: "Vibe Booster & Fun Generator",
+    role: "Vibe Booster & Singer",
     joinDate: "September 2023",
     birthday: "15 October",
     hometown: "Prayagraj",
     
     categories: ["Funny", "Helpful", "Energetic"],
-    tags: ["Fun Generator", "Vibe Booster", "Helper", "Entertainer"],
+    tags: ["Fun Generator", "Vibe Booster", "Helper", "Entertainer","Song","Player"],
     
     email: "siddharthmaurya455@gmail.com",
     instagram: "@siddharthmaurya",
@@ -203,12 +205,17 @@ export const friends = [
     rating: 4.9,
     isOnline: true,
     isSpecial: true,
-    favorites: ["Fun Activities", "Helping Friends", "Tech", "Memes"],
+    favorites: ["Cricket","Singing","Fun Activities", "Helping Friends", "Tech", "Memes"],
     
     gallery: [
       "/assets/images/sid.jpg",
-      "/assets/images/sid1.jpg",
-      "/assets/images/sid2.jpg"
+      "/assets/images/sid2.png",
+      "/assets/images/sid3.png",
+      "/assets/images/sid4.png",
+      "/assets/images/sid5.png",
+      "/assets/images/sid6.png",
+      "/assets/images/sid7.png",
+      "/assets/images/sid8.png",
     ]
   },
   {
@@ -227,8 +234,8 @@ export const friends = [
     birthday: "28 March",
     hometown: "Kolhapur",
     
-    categories: ["Dancer", "Strong", "Royal"],
-    tags: ["Dancer", "Queen", "Web Series Lover", "Loyal"],
+    categories: ["Dancer", "Brave Girl", "Royal"],
+    tags: ["Dancer", "Queen", "Web Series Lover", "Royal","Sleep"],
     
     email: "neha.kadam@example.com",
     instagram: "@nehakadam",
@@ -238,14 +245,18 @@ export const friends = [
     rating: 4.9,
     isOnline: false,
     isSpecial: true,
-    favorites: ["Dancing", "Web Series", "Movies", "Music", "Art"],
+    favorites: ["Dancing", "Web Series", "Movies", "Music", "Art","Sleeping"],
     
     gallery: [
       "/assets/images/neha.jpg",
-      "/assets/images/neha1.jpg",
-      "/assets/images/neha2.jpg"
-    ]
-  },
+      "/assets/images/neha1.png",
+      "/assets/images/neha2.png",
+      "/assets/images/neha3.png",
+      "/assets/images/neha4.png",
+      "/assets/images/neha5.png",
+      "/assets/images/neha6.png",
+      "/assets/images/neha7.png"
+ ] },
   {
     id: 8,
     title: "Harshada Patil",
@@ -277,8 +288,9 @@ export const friends = [
     
     gallery: [
       "/assets/images/harshada.jpg",
-      "/assets/images/harshada1.jpg",
-      "/assets/images/harshada2.jpg"
+      "/assets/images/harshu1.png",
+      "/assets/images/harshu2.png",
+      "/assets/images/harshu3.png",
     ]
   },
   {
@@ -292,12 +304,12 @@ export const friends = [
     
     fullName: "Sakshi Pawar",
     nickname: "Sakshi",
-    role: "Dancer & Content Creator",
+    role: "Dancer & Photographer",
     joinDate: "September 2023",
     birthday: "30 June",
     hometown: "Pune",
     
-    categories: ["Dancer", "Creative", "Photogenic"],
+    categories: ["Photogenic", "Creative"],
     tags: ["Dancer", "Content Creator", "Photographer", "Fun"],
     
     email: "sakshi.pawar@example.com",
@@ -312,7 +324,7 @@ export const friends = [
     
     gallery: [
       "/assets/images/sakshi.JPG",
-      "/assets/images/sakshi1.jpg",
+      "/assets/images/sakshi1.png",
       "/assets/images/sakshi2.jpg"
     ]
   },
@@ -382,7 +394,7 @@ export const friends = [
     
     gallery: [
       "/assets/images/moment11.jpg",
-      "/assets/images/supriya1.jpg",
+      "/assets/images/supi1.png",
       "/assets/images/supriya2.jpg"
     ]
   }

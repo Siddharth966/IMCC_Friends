@@ -84,6 +84,7 @@ const FriendDetail = () => {
         }
       }
     };
+
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [selectedImage, currentImageIndex]);
@@ -220,7 +221,7 @@ const FriendDetail = () => {
       )}
 
       {/* Floating Back Button */}
-      <div className="fixed top-4 left-4 z-50">
+      <div className="fixed top-20 left-0 z-20">
         <button
           onClick={() => navigate(-1)}
           className="group flex items-center space-x-2 bg-white/90 backdrop-blur-sm px-4 py-3 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:bg-white transform hover:-translate-x-1"
@@ -285,7 +286,7 @@ const FriendDetail = () => {
               <div className="flex items-end space-x-4 sm:space-x-6">
                 {/* Profile Image with Animation */}
                 <div className="relative">
-                  <div className="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 rounded-2xl border-4 border-white shadow-2xl overflow-hidden animate-float-slow">
+                  <div className="w-30 h-30 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 rounded-2xl border-4 border-white shadow-2xl overflow-hidden animate-float-slow">
                     <img
                       src={friend.img}
                       alt={friend.title}
@@ -565,53 +566,84 @@ const FriendDetail = () => {
             )}
 
             {activeTab === 'gallery' && (
-              <div className="animate-fadeIn">
-                <div className="flex justify-between items-center mb-4 sm:mb-6">
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Photo Gallery</h3>
-                  <span className="text-sm text-gray-500">
-                    {friend.gallery?.length || 0} items
-                  </span>
-                </div>
-                {friend.gallery && friend.gallery.length > 0 ? (
-                  <div 
-                    ref={imageContainerRef}
-                    className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-3 md:gap-4"
-                  >
-                    {friend.gallery.map((img, index) => (
-                      <div
-                        key={index}
-                        className="aspect-square rounded-xl overflow-hidden cursor-pointer group relative animate-slideUp"
-                        style={{ animationDelay: `${index * 100}ms` }}
-                        onClick={() => handleImageClick(img, index)}
-                      >
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center">
-                          <Maximize2 className="w-6 h-6 text-white" />
-                        </div>
-                        <img
-                          src={img}
-                          alt={`${friend.title} ${index + 1}`}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                        />
-                        {img.includes('.mp4') || img.includes('.mov') ? (
-                          <div className="absolute top-2 right-2 w-6 h-6 bg-black/50 rounded-full flex items-center justify-center">
-                            <Video className="w-3 h-3 text-white" />
-                          </div>
-                        ) : (
-                          <div className="absolute top-2 right-2 w-6 h-6 bg-black/50 rounded-full flex items-center justify-center">
-                            <CameraIcon className="w-3 h-3 text-white" />
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="text-center py-8 sm:py-12">
-                    <CameraIcon className="w-12 h-12 sm:w-16 sm:h-16 text-gray-300 mx-auto mb-4 animate-bounce" />
-                    <p className="text-gray-500">No photos available yet.</p>
-                  </div>
-                )}
-              </div>
-            )}
+  <div className="animate-fadeIn">
+
+    {/* HEADER */}
+    <div className="flex justify-between items-center mb-4 sm:mb-6">
+      <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Photo Gallery</h3>
+      <span className="text-sm text-gray-500">
+        {friend.gallery?.length || 0} items
+      </span>
+    </div>
+
+    {/* GALLERY GRID */}
+    {friend.gallery && friend.gallery.length > 0 ? (
+      <div
+        ref={imageContainerRef}
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-3 md:gap-4"
+      >
+        {friend.gallery.map((img, index) => (
+          <div
+            key={index}
+            className="aspect-square rounded-xl overflow-hidden cursor-pointer group relative animate-slideUp"
+            style={{ animationDelay: `${index * 100}ms` }}
+            onClick={() => setSelectedImage(img)}
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center">
+              <Maximize2 className="w-6 h-6 text-white" />
+            </div>
+
+            <img
+              src={img}
+              alt={`${friend.title} ${index + 1}`}
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+
+            {/* Icon */}
+            <div className="absolute top-2 right-2 w-6 h-6 bg-black/50 rounded-full flex items-center justify-center">
+              {img.includes('.mp4') || img.includes('.mov') ? (
+                <Video className="w-3 h-3 text-white" />
+              ) : (
+                <CameraIcon className="w-3 h-3 text-white" />
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    ) : (
+      <div className="text-center py-8 sm:py-12">
+        <CameraIcon className="w-12 h-12 sm:w-16 sm:h-16 text-gray-300 mx-auto mb-4 animate-bounce" />
+        <p className="text-gray-500">No photos available yet.</p>
+      </div>
+    )}
+
+    {/* FULLSCREEN IMAGE POPUP (LIGHTBOX) */}
+    {selectedImage && (
+      <div
+        className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+        onClick={() => setSelectedImage(null)}
+      >
+        {/* CLOSE BUTTON */}
+        <button
+          onClick={() => setSelectedImage(null)}
+          className="absolute top-6 right-6 px-4 py-2 bg-pink-600 text-white font-semibold rounded-lg shadow hover:bg-pink-700 transition"
+        >
+          Close ✖
+        </button>
+
+        {/* IMAGE */}
+        <img
+          src={selectedImage}
+          alt="Expanded"
+          className="w-full max-w-3xl max-h-[80vh] object-contain rounded-lg"
+          onClick={(e) => e.stopPropagation()}
+        />
+      </div>
+    )}
+
+  </div>
+)}
+
 
             {activeTab === 'memories' && (
               <div className="animate-fadeIn">
